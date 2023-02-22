@@ -1,0 +1,10 @@
+<%- include("partials/header")%>
+<h1>Home</h1>
+<p><%=homeStartingContent%></p>
+
+<%truncPostList.forEach(function(post){%>
+    <h1><%=post.title%></h1>
+    <p><%= post.body%> <a href="/posts/<%=post.title%>">read more</a></p>
+<%})%>
+
+<%- include("partials/footer")%>
